@@ -32,6 +32,7 @@
   apt_repository:
     repo: "deb https://packages.sury.org/php/ {{ ansible_distribution_release }} main"
     state: present
+    validate_certs: false
   register: php_ondrej_debian_repo
   when: ansible_distribution == "Debian"
 
